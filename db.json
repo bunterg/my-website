@@ -1,11 +1,45 @@
 {
-    "posts": [
+    "results": [
       {
-        "id": 1,
-        "title": "hello"
+        "id": "2bba790e-aeef-11ed-afa1-0242ac120002",
+        "title": "hello",
+        "caption": "wold",
+        "width": 150,
+        "height": 150,
+        "searchable": "test1",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "id": "2bba7bac-aeef-11ed-afa1-0242ac120002",
+        "title": "Lorem",
+        "caption": "ipsum",
+        "width": 170,
+        "height": 170,
+        "searchable": "test2",
+        "image": "https://via.placeholder.com/170"
+      },
+      {
+        "id": "2bba7bad-aeef-11ed-afa1-0242ac120002",
+        "title": "Lorem 1",
+        "caption": "ipsum 2",
+        "width": 125,
+        "height": 125,
+        "searchable": "test2",
+        "image": "https://via.placeholder.com/125"
+      },
+      {
+        "id": "2bba7baf-aeef-11ed-afa1-0242ac120002",
+        "title": "Lorem 3",
+        "caption": "ipsum 3",
+        "width": 170,
+        "height": 170,
+        "searchable": "test1",
+        "image": "https://via.placeholder.com/170"
       }
     ],
-    "profile": {
-      "name": "typicode"
+    "settings": {
+      "api": {
+        "search": "https://my-json-server.typicode.com/bunterg/my-website/results"
+      }
     }
   }
