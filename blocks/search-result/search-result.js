@@ -1,16 +1,24 @@
-// import { decorateIcons } from '../../scripts/lib-franklin.js';
+import { subscribe, unsubscribe } from '../../scripts/app-state';
+
+class LayoutManager {
+  constructor(container) {
+    this.container = container;
+    this.fragment = document.createDocumentFragment();
+  }
+
+  update(state) {
+    this.container.innerHTML = `IDK ${Math.random()}` 
+  }
+}
 
 export default async function decorate(block) {
-  block.innerHTML = '';
-  const resp = await fetch('https://my-json-server.typicode.com/bunterg/my-website/results', {});
-  const data = await resp.json();
-
+  const layoutManager = new LayoutManager(block);
   const container = document.createElement('div');
-  data.forEach((element) => {
-    const node = document.createElement('div');
-    node.id = element.id;
-    node.textContent = element.title;
-    container.append(node);
-  });
+  container.id = 'search-result'
+  const handleUpdate = () => {
+    layoutManager.update();
+  }
+  subscribe(update);
+  block.innerHTML = 'Default response';
   block.append(container);
 }
