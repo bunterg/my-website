@@ -1,5 +1,5 @@
 // Define a state object
-const state = {
+let state = {
   query: '',
 };
 
@@ -18,7 +18,6 @@ function setState(action) {
   const handler = REDUCERS[action.action];
   if(!handler) return;
   state = handler(action);
-  
   notifyObservers();
 }
 

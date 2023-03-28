@@ -1,4 +1,4 @@
-import { subscribe, unsubscribe } from '../../scripts/app-state';
+import { subscribe, unsubscribe } from '../../scripts/app-state.js';
 
 class LayoutManager {
   constructor(container) {
@@ -7,7 +7,7 @@ class LayoutManager {
   }
 
   update(state) {
-    this.container.innerHTML = `IDK ${Math.random()}` 
+    this.container.innerHTML = state.query;
   }
 }
 
@@ -15,10 +15,11 @@ export default async function decorate(block) {
   const layoutManager = new LayoutManager(block);
   const container = document.createElement('div');
   container.id = 'search-result'
-  const handleUpdate = () => {
-    layoutManager.update();
+  container.innerHTML = 'loading';
+  const handleUpdate = (state) => {
+    layoutManager.update(state);
   }
-  subscribe(update);
-  block.innerHTML = 'Default response';
+  subscribe(handleUpdate);
+  block.innerHTML = '';
   block.append(container);
 }
