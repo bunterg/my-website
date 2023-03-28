@@ -39,7 +39,8 @@
     ],
     "settings": {
       "api": {
-        "search": "https://my-json-server.typicode.com/bunterg/my-website/results"
+        "search": "https://my-json-server.typicode.com/bunterg/my-website/results",
+        "docs": "https://jsonplaceholder.typicode.com/"
       }
     }
   }

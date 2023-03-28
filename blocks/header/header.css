@@ -4,6 +4,8 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  border-bottom: solid 1px;
+  min-height: 79px;
 }
 
 header nav {
@@ -15,7 +17,7 @@ header nav {
   align-items: center;
   gap: 0 2em;
   margin: auto;
-  max-width: 1264px;
+  /* max-width: 1264px; */
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
@@ -272,4 +274,32 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+
+.search-bar {
+  box-sizing: border-box;
+  border: solid 2px #d5d5d5;
+  height: 48px;
+  border-radius: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar .icon {
+  height: 28px;
+  width: 28px;
+}
+
+.search-bar input {
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  flex-grow: 1;
+  margin-left: 8px;
 }

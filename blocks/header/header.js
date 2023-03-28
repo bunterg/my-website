@@ -122,6 +122,16 @@ export default async function decorate(block) {
           }
         });
       });
+
+      const navTools = nav.querySelector('.nav-tools');
+      if(navTools) {
+          const svg = navTools.querySelector('svg');
+          navSections.innerHTML = `<div class='search-bar'>
+            <span class="icon icon-search"></span>
+            <input type="text" id="search-text"/>
+            <span class="nav-hamburger-icon"></span>
+          <div>`
+      }
     }
 
     // hamburger for mobile
